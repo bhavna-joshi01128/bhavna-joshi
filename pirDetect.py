@@ -9,7 +9,7 @@ class detector(object):
         self.currState = False
         self.prevState = False
         GPIO.setmode(GPIO.BOARD)
-        GPIO.setup(self.sensor, GPIO.IN, pull_up_down=GPIO.PUD_DOWN)
+        GPIO.setup(self.sensor, GPIO.IN, pull_up_down=GPIO.PUD_DOWN )
     def read(self):
         self.prevState = self.currState
         self.currState = GPIO.input(self.sensor)
